@@ -67,6 +67,7 @@ img{
     /*border:5px solid green;*/
     display: flex;
     justify-content: center;
+    padding-left: 10px;
     
     
     
@@ -78,8 +79,7 @@ img{
     flex-grow:1;
     text-align: center;
     font-size: smaller;
-    padding-left:10px;
- 
+    
 
 }
 .encabezado{
