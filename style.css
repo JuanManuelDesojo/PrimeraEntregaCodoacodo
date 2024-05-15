@@ -102,8 +102,9 @@ aside{
 }
 .promociones{
     border:2px solid black;
-    flex:5 5  100px;
+    flex:5 5 100px;
     text-align: justify;
+    
 
 }
 aside>p{
