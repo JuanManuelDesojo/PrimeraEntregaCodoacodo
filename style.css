@@ -67,7 +67,7 @@ img{
     /*border:5px solid green;*/
     display: flex;
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 30px;
     
     
     
@@ -90,7 +90,6 @@ img{
     
 }
     
-
 .principio{
     display: flex;
 }
@@ -104,7 +103,7 @@ aside{
     border:2px solid black;
     flex:5 5 100px;
     text-align: justify;
-    
+
 
 }
 aside>p{
