@@ -91,15 +91,19 @@ img{
 }
     
 
-
+.principio{
+    display: flex;
+}
 aside{
     border:2px solid blue;
-    display: inline-block;
+    flex:10 5 400px;
     text-align:justify;
+    
 }
 .promociones{
     border:2px solid black;
-    display: inline-block;
+    flex:5 5  100px;
+    text-align: justify;
 
 }
 aside>p{
