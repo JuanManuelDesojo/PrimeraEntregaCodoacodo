@@ -1,4 +1,6 @@
-
+*{
+    background-color: lightcyan;
+}
 .titulos{
   
     font-family:'Bebas Neue';   
@@ -121,6 +123,7 @@ aside>ol{
 aside>h2{
     border:2px dotted black;
 }
+
 
 
 

@@ -3,38 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleingreso.css" />
     <title>Ingreso a mi cuenta Rincon de los Libros</title>
   </head>
   <body>
     <h1>Bienvenido al Rincon de los Libros</h1>
     <p>Si sos nuevo en la pagina ingresa tus datos:</p>
-    <form action="Link" method="POST" target="_blank">
-      <label for="firstname">Nombre: </label>
-      <input size="30" type="text" name="firstname" id="firstname" /><br />
-      <label for="LastName">Apellido: </label>
-      <input size="30" type="text" name="LastName" id="LastName" /><br />
-      <label for="email">Email: </label>
-      <input size="30" type="text" name="email" id="email" /><br />
-      <label for="telefono">Telefono: </label>
-      <input size="30" type="text" name="telefono" id="telefono" /><br />
-      <label for="Clavenueva">Clave nueva:</label>
-      <input size="30" type="text" name="Clavenueva" id="Clavenueva" /><br />
-      <label for="confirmarclave">Confirmar clave: </label>
+    <form action name="formulario" method="get">
       <input
-        size="30"
         type="text"
+        name="firstname"
+        id="firstname"
+        maxlength="30"
+        placeholder="Nombre:"
+      /><br />
+      <input
+        type="text"
+        name="LastName"
+        id="LastName"
+        maxlength="30"
+        placeholder="Apellido:"
+      /><br />
+      <input
+        type="email"
+        name="emailUsuario"
+        id="emailUsuario"
+        maxlength="30"
+        placeholder="Email:"
+      /><br />
+      <input
+        type="tel"
+        name="telefonoUsuario"
+        id="telefonoUsuario"
+        maxlength="15"
+        placeholder="Telefono:"
+      /><br />
+      <input
+        type="password"
+        name="clavenueva"
+        id="clavenueva"
+        minlength="6"
+        maxlength="8"
+        placeholder="Clave Nueva:"
+      /><br />
+      <input
+        type="password"
         name="confirmarclave"
         id="confirmarclave"
+        minlength="6"
+        maxlength="8"
+        placeholder="Confirmar Clave:"
       /><br />
-      <input type="submit" value="Enviar Datos" />
+      <button type="submit" id="btn" name="btn">Confirmar Alta</button>
     </form>
+    <script>
+      (function () {
+        var formulario = document.getElementsByName('formulario')[0];
+        (elementos = formulario.elements),
+          (boton = document.getElementById('btn'));
+
+        var validarNombre = function (e) {
+          if (formulario.firstname.value == 0) {
+            alert('Falta completar el campo Nombre');
+            e.preventDefault();
+          }
+        };
+        var validarApellido = function (e) {
+          if (formulario.LastName.value == 0) {
+            alert('Falta completar el campo Apellido');
+            e.preventDefault();
+          }
+        };
+        var validarEmail = function (e) {
+          if (formulario.emailUsuario.value == 0) {
+            alert('Falta completar el campo Email');
+            e.preventDefault();
+          }
+        };
+        var validarTelefono = function (e) {
+          if (formulario.telefonoUsuario.value == 0) {
+            alert('Falta completar el campo Telefono');
+            e.preventDefault();
+          }
+        };
+        var validarClaveNueva = function (e) {
+          if (formulario.clavenueva.value == 0) {
+            alert('Falta completar el campo Clave Nueva');
+            e.preventDefault();
+          }
+        };
+        var validarConfirmarClave = function (e) {
+          if (formulario.confirmarclave.value == 0) {
+            alert('Falta completar el campo Confirmar clave');
+            e.preventDefault();
+          }
+        };
+        var validar = function (e) {
+          validarNombre(e);
+          validarApellido(e);
+          validarEmail(e);
+          validarTelefono(e);
+          validarClaveNueva(e);
+          validarConfirmarClave(e);
+        };
+        formulario.addEventListener('submit', validar);
+      })();
+    </script>
     <p>Si ya sos socio ingresa a tu cuenta:</p>
-    <form action="Link" method="POST" target="_blank">
+    <form action method="get" target="_self">
       <label for="mail">Email: </label>
-      <input size="30" type="text" name="email" id="email" /><br />
+      <input size="30" type="email" name="email" id="email" />
       <label for="clave">Clave: </label>
-      <input size="30" type="text" name="clave" id="clave" /><br />
-      <input type="button" value="Ingresa a tu cuenta" />
+      <input
+        type="password"
+        name="claveingreso"
+        id="clave"
+        minlength="6"
+        maxlength="8"
+      />
+      <button type="none">Ingresa a tu cuenta</button>
     </form>
   </body>
 </html>
