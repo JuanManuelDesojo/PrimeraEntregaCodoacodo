@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
+    <script type="text/javascript" src="jsfile.js"></script>
     <title>El rincon de los libros</title>
+   
 </head>
 <body>
 <header>
-    <button id="ingreso">Ingresa a mi cuenta</button>
+    <button id="ingreso"><a rel="ingreso" href="ingreso.html" target="blank">Ingresa a tu Cuenta</a></button>
 
     <div class="top">
         <a id="volver"><h1>Rincon de los Libros</h1></a>
@@ -25,7 +26,10 @@
             <a href="#internacional">Internacional</a>
             <a href="#ingles">Libros en ingles</a>
             </nav> 
-    <input id="busqueda-libro" type="text" name="q" placeholder="libro, autor o genero">
+    <div class="buscador">
+        <input id="busqueda-libro" type="text" name="q" placeholder="Ingrese un libro o autor...">
+    </div>       
+    
     </div>
     
 </header>
@@ -111,5 +115,6 @@
     <h3>By Juan Manuel Desojo 2024</h3>
     <a href="#volver">LLevame arriba</a>
 </footer>
+
 </body>
 </html>

@@ -19,10 +19,11 @@ margin-top: 0px;
 #navigator{
     
     font-size: 1rem;
-    min-height:3.00;
-    display: flex;
+    min-height:7.00;
+    display:flex;
     align-items:left;
     padding:0 1rem;
+    
     
 }
 button{
@@ -89,7 +90,11 @@ img{
     padding-bottom:10px;
     
 }
-    
+.buscador{
+    display:flex;
+    margin-left: 400px;
+        
+}
 .principio{
     display: flex;
 }
